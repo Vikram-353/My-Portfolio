@@ -16,7 +16,7 @@ function Footer() {
 
         {/* Navigation Links */}
         <div className="flex flex-col space-y-2">
-          <Link to="/" className="hover:text-white">
+          <Link to="/home" className="hover:text-white">
             Home
           </Link>
           <Link to="/about" className="hover:text-white">
