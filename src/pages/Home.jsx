@@ -836,7 +836,7 @@ function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="px-8 md:px-20 py-20">
+      {/* <section id="testimonials" className="px-8 md:px-20 py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -872,10 +872,9 @@ function Home() {
             />
           </div>
         </motion.div>
-      </section>
+      </section> */}
 
-      {/* Contact Section */}
-      {/* <section id="contact" className="px-8 md:px-20 py-20 bg-gray-900/70">
+      <section id="research" className="px-8 md:px-20 py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -885,105 +884,71 @@ function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                Let's Work Together
+                Research & Innovations
               </span>
             </h2>
             <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-              Have a project in mind? Let's discuss how I can help bring your
-              ideas to life.
+              Explore my published research papers and patented innovations.
             </p>
           </div>
 
-          <div className="max-w-xl mx-auto">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="What's this about?"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-1">
-                  Message
-                </label>
-                <textarea
-                  rows="4"
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-400 py-3 rounded-lg text-lg font-medium hover:from-blue-500 hover:to-blue-300 transition duration-300 shadow-lg hover:shadow-blue-500/20"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-white">
+                AI-Powered Surveillance System
+              </h3>
+              <p className="text-gray-400 mt-2">
+                A research paper on using YOLOv8 for real-time suspicious
+                activity detection.
+              </p>
+              <a
+                href="https://your-research-paper-link.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline mt-4 inline-block"
               >
-                Send Message
-              </button>
-            </form>
+                Read More →
+              </a>
+            </div>
+
+            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-white">
+                Smart Parking Management Patent
+              </h3>
+              <p className="text-gray-400 mt-2">
+                A patented system for detecting empty and occupied parking
+                spaces using AI.
+              </p>
+              <a
+                href="https://your-patent-link.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline mt-4 inline-block"
+              >
+                View Patent →
+              </a>
+            </div>
+
+            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-white">
+                Coal Mines Safety Monitoring
+              </h3>
+              <p className="text-gray-400 mt-2">
+                A research project on enhancing safety measures in coal mines
+                using IoT & AI.
+              </p>
+              <a
+                href="https://your-research-paper-link.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline mt-4 inline-block"
+              >
+                Learn More →
+              </a>
+            </div>
           </div>
         </motion.div>
-      </section> */}
-
-      {/* Footer
-      <footer className="px-8 md:px-20 py-10 bg-gray-900 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <Link to="/" className="text-xl font-bold text-blue-400">
-              Vikram Ranjan
-            </Link>
-            <p className="text-gray-400 mt-2">
-              Front-End Developer | AI & ML Enthusiast
-            </p>
-          </div>
-
-          <div className="flex space-x-6">
-            {["github", "linkedin", "twitter", "dribbble"].map((social) => (
-              <a
-                key={social}
-                href={`#${social}`}
-                className="text-gray-400 hover:text-blue-400 transition duration-300"
-              >
-                <img
-                  src={`/api/placeholder/24/24`}
-                  alt={social}
-                  className="w-6 h-6"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
-        <div className="mt-8 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} Vikram Ranjan. All rights reserved.
-        </div>
-      </footer> */}
+      </section>
     </div>
   );
 }
