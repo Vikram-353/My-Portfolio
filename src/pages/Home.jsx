@@ -1,346 +1,3 @@
-// import React from "react";
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
-// import { Link } from "react-router-dom";
-
-// function Home() {
-//   return (
-//     <div className="w-full min-h-screen bg-gray-900 text-white">
-//       {/* Hero Section */}
-//       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-10">
-//         {/* Left Side - Text Content */}
-//         <div className="text-center md:text-left max-w-xl">
-//           <h1 className="text-4xl md:text-6xl font-bold">
-//             Hello, I'm Vikram Ranjan
-//           </h1>
-//           <p className="mt-4 text-gray-400 text-lg">
-//             Front-End Developer | AI & ML Enthusiast
-//           </p>
-//           <div className="mt-6 flex justify-center md:justify-start space-x-4">
-//             <Link
-//               to="/projects"
-//               className="bg-blue-600 px-6 py-2 rounded-lg text-lg hover:bg-blue-500"
-//             >
-//               View Projects
-//             </Link>
-//             <Link
-//               to="/contact"
-//               className="border border-blue-500 px-6 py-2 rounded-lg text-lg hover:bg-blue-500"
-//             >
-//               Contact Me
-//             </Link>
-//           </div>
-//         </div>
-
-//         {/* Right Side - 3D Animation */}
-//         <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
-//           <Canvas>
-//             <OrbitControls enableZoom={false} />
-//             <ambientLight intensity={0.5} />
-//             <directionalLight position={[2, 5, 2]} intensity={1} />
-//             <Sphere args={[1, 100, 200]} scale={2.5}>
-//               <MeshDistortMaterial
-//                 color="#4B9CD3"
-//                 attach="material"
-//                 distort={0.5}
-//                 speed={2}
-//               />
-//             </Sphere>
-//           </Canvas>
-//         </div>
-//       </section>
-
-//       {/* About Section */}
-//       <section className="text-center px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold">About Me</h2>
-//         <p className="mt-4 text-gray-400 text-lg">
-//           Passionate about creating dynamic and intelligent web applications.
-//         </p>
-//       </section>
-
-//       {/* Projects Section */}
-//       <section className="px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold text-center">My Work</h2>
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-//           {/* Example Project Card */}
-//           <div className="bg-gray-800 p-4 rounded-lg hover:shadow-lg">
-//             <h3 className="text-xl font-bold">Project Name</h3>
-//             <p className="text-gray-400 mt-2">
-//               Brief description of the project.
-//             </p>
-//           </div>
-//           {/* Add more project cards here */}
-//         </div>
-//       </section>
-
-//       {/* Contact Section */}
-//       <section className="text-center px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold">Let's Connect</h2>
-//         <p className="mt-4 text-gray-400 text-lg">Reach out to collaborate!</p>
-//         <div className="mt-6 flex justify-center space-x-4">
-//           <Link
-//             to="/contact"
-//             className="bg-blue-600 px-6 py-2 rounded-lg text-lg hover:bg-blue-500"
-//           >
-//             Contact Me
-//           </Link>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default Home;
-
-// import React from "react";
-// import { Canvas } from "@react-three/fiber";
-// import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
-// import { Link } from "react-router-dom";
-// import { motion } from "framer-motion";
-
-// function Home() {
-//   return (
-//     <div className="w-full min-h-screen bg-gray-900 text-white">
-//       {/* Hero Section */}
-//       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-10">
-//         {/* Left Side - Text Content */}
-//         <div className="text-center md:text-left max-w-xl">
-//           <motion.h1
-//             className="text-4xl md:text-6xl font-bold"
-//             initial={{ opacity: 0, y: -20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 1 }}
-//           >
-//             Hello, I'm <span className="text-blue-500">Vikram Ranjan</span>
-//           </motion.h1>
-//           <motion.p
-//             className="mt-4 text-gray-400 text-lg"
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.2, duration: 1 }}
-//           >
-//             Front-End Developer | AI & ML Enthusiast
-//           </motion.p>
-//           <div className="mt-6 flex justify-center md:justify-start space-x-4">
-//             <Link
-//               to="/projects"
-//               className="bg-blue-600 px-6 py-2 rounded-lg text-lg hover:bg-blue-500 transition duration-300"
-//             >
-//               View Projects
-//             </Link>
-//             <Link
-//               to="/contact"
-//               className="border border-blue-500 px-6 py-2 rounded-lg text-lg hover:bg-blue-500 transition duration-300"
-//             >
-//               Contact Me
-//             </Link>
-//           </div>
-//         </div>
-
-//         {/* Right Side - 3D Animation */}
-//         <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
-//           <Canvas>
-//             <OrbitControls enableZoom={false} />
-//             <ambientLight intensity={0.5} />
-//             <directionalLight position={[2, 5, 2]} intensity={1} />
-//             <Sphere args={[1, 100, 200]} scale={2.5}>
-//               <MeshDistortMaterial
-//                 color="#4B9CD3"
-//                 attach="material"
-//                 distort={0.5}
-//                 speed={2}
-//               />
-//             </Sphere>
-//           </Canvas>
-//         </div>
-//       </section>
-
-//       {/* About Section */}
-//       <section className="text-center px-8 md:px-20 py-10 bg-gray-800">
-//         <h2 className="text-3xl font-bold">About Me</h2>
-//         <p className="mt-4 text-gray-400 text-lg max-w-3xl mx-auto">
-//           Passionate about creating dynamic and intelligent web applications.
-//           Skilled in React.js, AI, and data science, I love blending technology
-//           and creativity.
-//         </p>
-//       </section>
-
-//       {/* Projects Section */}
-//       <section className="px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold text-center">My Work</h2>
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-//           {[1, 2, 3].map((project, index) => (
-//             <motion.div
-//               key={index}
-//               className="bg-gray-800 p-4 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-//               whileHover={{ scale: 1.05 }}
-//             >
-//               <h3 className="text-xl font-bold">Project {project}</h3>
-//               <p className="text-gray-400 mt-2">
-//                 Brief description of the project.
-//               </p>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* Contact Section */}
-//       <section className="text-center px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold">Let's Connect</h2>
-//         <p className="mt-4 text-gray-400 text-lg">Reach out to collaborate!</p>
-//         <div className="mt-6 flex justify-center space-x-4">
-//           <Link
-//             to="/contact"
-//             className="bg-blue-600 px-6 py-2 rounded-lg text-lg hover:bg-blue-500 transition duration-300"
-//           >
-//             Contact Me
-//           </Link>
-//         </div>
-//       </section>
-
-//       {/* Footer */}
-//       <footer className="bg-gray-900 text-gray-400 text-center py-6">
-//         <p>© 2024 Vikram Ranjan. All rights reserved.</p>
-//         <div className="mt-2 flex justify-center space-x-4">
-//           <a
-//             href="https://github.com/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="hover:text-white transition"
-//           >
-//             GitHub
-//           </a>
-//           <a
-//             href="https://linkedin.com/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="hover:text-white transition"
-//           >
-//             LinkedIn
-//           </a>
-//         </div>
-//       </footer>
-//     </div>
-//   );
-// }
-
-// export default Home;
-
-// import React from "react";
-// import { Canvas } from "@react-three/fiber";
-// import {
-//   OrbitControls,
-//   TorusKnot,
-//   MeshWobbleMaterial,
-// } from "@react-three/drei";
-// import { Link } from "react-router-dom";
-// import { motion } from "framer-motion";
-
-// function Home() {
-//   return (
-//     <div className="w-full min-h-screen bg-gray-900 text-white">
-//       {/* Hero Section */}
-//       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-10">
-//         {/* Left Side - Text Content */}
-//         <div className="text-center md:text-left max-w-xl">
-//           <motion.h1
-//             className="text-4xl md:text-6xl font-bold"
-//             initial={{ opacity: 0, y: -20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 1 }}
-//           >
-//             Hello, I'm <span className="text-blue-500">Vikram Ranjan</span>
-//           </motion.h1>
-//           <motion.p
-//             className="mt-4 text-gray-400 text-lg"
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ delay: 0.2, duration: 1 }}
-//           >
-//             Front-End Developer | AI & ML Enthusiast
-//           </motion.p>
-//           <div className="mt-6 flex justify-center md:justify-start space-x-4">
-//             <Link
-//               to="/projects"
-//               className="bg-blue-600 px-6 py-2 rounded-lg text-lg hover:bg-blue-500 transition duration-300"
-//             >
-//               View Projects
-//             </Link>
-//             <Link
-//               to="/contact"
-//               className="border border-blue-500 px-6 py-2 rounded-lg text-lg hover:bg-blue-500 transition duration-300"
-//             >
-//               Contact Me
-//             </Link>
-//           </div>
-//         </div>
-
-//         {/* Right Side - 3D Animation */}
-//         <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px]">
-//           <Canvas>
-//             <OrbitControls enableZoom={false} />
-//             <ambientLight intensity={0.6} />
-//             <directionalLight position={[3, 5, 2]} intensity={1} />
-//             <TorusKnot args={[1, 0.3, 128, 32]} scale={2}>
-//               <MeshWobbleMaterial
-//                 color="#ff8c00"
-//                 attach="material"
-//                 factor={0.6} // Intensity of wobble
-//                 speed={2} // Speed of the animation
-//               />
-//             </TorusKnot>
-//           </Canvas>
-//         </div>
-//       </section>
-
-//       {/* About Section */}
-//       <section className="text-center px-8 md:px-20 py-10 bg-gray-800">
-//         <h2 className="text-3xl font-bold">About Me</h2>
-//         <p className="mt-4 text-gray-400 text-lg max-w-3xl mx-auto">
-//           Passionate about creating dynamic and intelligent web applications.
-//           Skilled in React.js, AI, and data science, I love blending technology
-//           and creativity.
-//         </p>
-//       </section>
-
-//       {/* Projects Section */}
-//       <section className="px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold text-center">My Work</h2>
-//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-//           {[1, 2, 3].map((project, index) => (
-//             <motion.div
-//               key={index}
-//               className="bg-gray-800 p-4 rounded-lg hover:shadow-lg transition duration-300 transform hover:-translate-y-2"
-//               whileHover={{ scale: 1.05 }}
-//             >
-//               <h3 className="text-xl font-bold">Project {project}</h3>
-//               <p className="text-gray-400 mt-2">
-//                 Brief description of the project.
-//               </p>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* Contact Section */}
-//       <section className="text-center px-8 md:px-20 py-10">
-//         <h2 className="text-3xl font-bold">Let's Connect</h2>
-//         <p className="mt-4 text-gray-400 text-lg">Reach out to collaborate!</p>
-//         <div className="mt-6 flex justify-center space-x-4">
-//           <Link
-//             to="/contact"
-//             className="bg-blue-600 px-6 py-2 rounded-lg text-lg hover:bg-blue-500 transition duration-300"
-//           >
-//             Contact Me
-//           </Link>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
-// export default Home;
-
 import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -352,7 +9,7 @@ import {
 } from "@react-three/drei";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { assets } from "../assets/assets";
+import { assets, projectsData } from "../assets/assets";
 
 import {
   FaReact,
@@ -384,7 +41,13 @@ const TechIcon = ({ name, icon }) => (
 );
 
 // Featured project component
-const FeaturedProject = ({ title, description, image, tags, link }) => (
+const FeaturedProject = ({
+  title,
+  description,
+  image,
+  technologies,
+  codeLink,
+}) => (
   <motion.div
     className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition duration-300"
     whileHover={{ y: -10 }}
@@ -401,7 +64,7 @@ const FeaturedProject = ({ title, description, image, tags, link }) => (
       <h3 className="text-xl font-bold text-blue-400">{title}</h3>
       <p className="text-gray-300 mt-2 text-sm">{description}</p>
       <div className="flex flex-wrap gap-2 mt-3">
-        {tags.map((tag, index) => (
+        {technologies.map((tag, index) => (
           <span
             key={index}
             className="bg-blue-900/50 text-blue-200 text-xs px-2 py-1 rounded-full"
@@ -411,7 +74,7 @@ const FeaturedProject = ({ title, description, image, tags, link }) => (
         ))}
       </div>
       <Link
-        to={link}
+        to={codeLink}
         className="inline-block mt-4 text-blue-400 hover:text-blue-300 text-sm font-semibold"
       >
         View Project →
@@ -421,21 +84,21 @@ const FeaturedProject = ({ title, description, image, tags, link }) => (
 );
 
 // Testimonial component
-const Testimonial = ({ quote, author, role }) => (
-  <motion.div
-    className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    viewport={{ once: true }}
-  >
-    <p className="text-gray-300 italic">{quote}</p>
-    <div className="mt-4">
-      <p className="text-blue-400 font-semibold">{author}</p>
-      <p className="text-gray-400 text-sm">{role}</p>
-    </div>
-  </motion.div>
-);
+// const Testimonial = ({ quote, author, role }) => (
+//   <motion.div
+//     className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
+//     initial={{ opacity: 0, y: 20 }}
+//     whileInView={{ opacity: 1, y: 0 }}
+//     transition={{ duration: 0.8 }}
+//     viewport={{ once: true }}
+//   >
+//     <p className="text-gray-300 italic">{quote}</p>
+//     <div className="mt-4">
+//       <p className="text-blue-400 font-semibold">{author}</p>
+//       <p className="text-gray-400 text-sm">{role}</p>
+//     </div>
+//   </motion.div>
+// );
 
 // Animated Scene
 const AnimatedScene = () => {
@@ -500,34 +163,6 @@ function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Sample data for projects
-  const featuredProjects = [
-    {
-      title: "AI Image Generator",
-      description:
-        "A web application that uses machine learning to generate unique artwork based on text prompts.",
-      image: "/api/placeholder/600/400",
-      tags: ["React", "TensorFlow.js", "Tailwind CSS"],
-      link: "/projects/ai-image-generator",
-    },
-    {
-      title: "Data Visualization Dashboard",
-      description:
-        "An interactive dashboard for visualizing complex datasets with customizable charts and filters.",
-      image: "/api/placeholder/600/400",
-      tags: ["D3.js", "React", "Firebase"],
-      link: "/projects/data-dashboard",
-    },
-    {
-      title: "Smart Task Manager",
-      description:
-        "A productivity app that uses AI to prioritize tasks and suggest optimal work schedules.",
-      image: "/api/placeholder/600/400",
-      tags: ["React Native", "Node.js", "MongoDB"],
-      link: "/projects/smart-tasks",
-    },
-  ];
-
   // Sample data for skills
   const skills = [
     { name: "React", icon: <FaReact className="text-blue-400 text-3xl" /> },
@@ -578,27 +213,13 @@ function Home() {
       ),
       link: "https://leetcode.com/u/Vikram_Ranjan/",
     },
-
-    // {
-    //   name: "Twitter",
-    //   icon: (
-    //     <FaTwitter className="text-3xl text-blue-400 hover:text-blue-500 transition" />
-    //   ),
-    //   link: "https://twitter.com/yourusername",
-    // },
-    // {
-    //   name: "Dribbble",
-    //   icon: (
-    //     <FaDribbble className="text-3xl text-pink-500 hover:text-pink-600 transition" />
-    //   ),
-    //   link: "https://dribbble.com/yourusername",
-    // },
   ];
+
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white">
       <section
         id="home"
-        className="pt-20 lg:pt-0 flex flex-col lg:flex-row items-center justify-between px-8 md:px-20 min-h-screen"
+        className="pt-30 lg:pt-0 flex flex-col lg:flex-row items-center justify-between px-8 md:px-20 min-h-screen"
       >
         {/* Left Side - Text Content */}
         <motion.div
@@ -696,10 +317,10 @@ function Home() {
         </motion.div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Improved for better responsiveness */}
       <section
         id="about"
-        className="text-center px-8 md:px-20 py-20 bg-gray-900/50 backdrop-blur-sm"
+        className="text-center px-4 sm:px-8 md:px-20 py-16 md:py-20 bg-gray-900/50 backdrop-blur-sm"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -708,14 +329,15 @@ function Home() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="text-3xl font-bold">
+          <h2 className="text-2xl md:text-3xl font-bold">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               About Me
             </span>
           </h2>
 
           <div className="mt-6 flex flex-col md:flex-row gap-8 items-center">
-            <div className="w-480 h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full p-1">
+            {/* Profile Image - Responsive sizing */}
+            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full p-1 flex-shrink-0 mx-auto md:mx-0">
               <div className="w-full h-full rounded-full overflow-hidden">
                 <img
                   src={assets.profile_pic}
@@ -725,15 +347,16 @@ function Home() {
               </div>
             </div>
 
-            <div className="text-left">
-              <p className="text-gray-300 text-lg">
+            {/* Text Content - Improved text alignment and spacing */}
+            <div className="text-left mt-6 md:mt-0">
+              <p className="text-gray-300 text-base md:text-lg">
                 I'm a passionate front-end developer with 5+ years of experience
                 building modern web applications. My journey in tech started
                 with a fascination for creating visually appealing interfaces,
                 and evolved into a deep interest in AI and machine learning
                 integration.
               </p>
-              <p className="mt-4 text-gray-300 text-lg">
+              <p className="mt-4 text-gray-300 text-base md:text-lg">
                 I specialize in creating intuitive, responsive, and accessible
                 user interfaces that bridge the gap between complex
                 functionalities and user-friendly experiences. My goal is to
@@ -767,7 +390,7 @@ function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="px-8 md:px-20 py-20">
+      <section id="projects" className="px-4 sm:px-8 md:px-20 py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -775,21 +398,25 @@ function Home() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-bold">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Featured Projects
               </span>
             </h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+            <p className="text-gray-400 mt-4 max-w-xl mx-auto px-4">
               Here are some of my recent projects that showcase my skills and
               interests.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
-              <FeaturedProject key={index} {...project} />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {projectsData.map((project, index) =>
+              project.featured ? (
+                <FeaturedProject key={index} {...project} />
+              ) : (
+                ""
+              )
+            )}
           </div>
 
           <div className="text-center mt-12">
@@ -803,8 +430,11 @@ function Home() {
         </motion.div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="px-8 md:px-20 py-20 bg-gray-900/50">
+      {/* Skills Section - Improved for better responsiveness */}
+      <section
+        id="skills"
+        className="px-4 sm:px-8 md:px-20 py-16 md:py-20 bg-gray-900/50"
+      >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -812,31 +442,38 @@ function Home() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-bold">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Skills & Technologies
               </span>
             </h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+            <p className="text-gray-400 mt-4 max-w-xl mx-auto px-4">
               Tools and technologies I work with to bring ideas to life.
             </p>
           </div>
 
-          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
+          <div className="bg-gray-800/50 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl border border-gray-700">
+            {/* Responsive grid with improved spacing and alignment */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6">
               {skills.map((skill, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  {skill.icon}
-                  <span className="text-lg font-semibold">{skill.name}</span>
-                </div>
+                <motion.div
+                  key={index}
+                  className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 sm:gap-3 p-3 hover:bg-gray-700/30 transition-colors rounded-lg"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="mb-2 sm:mb-0">{skill.icon}</div>
+                  <span className="text-sm md:text-base font-medium text-center sm:text-left">
+                    {skill.name}
+                  </span>
+                </motion.div>
               ))}
             </div>
           </div>
         </motion.div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* <section id="testimonials" className="px-8 md:px-20 py-20">
+      {/* Research Section */}
+      <section id="research" className="px-4 sm:px-8 md:px-20 py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -844,55 +481,17 @@ function Home() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                What People Say
-              </span>
-            </h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-              Feedback from clients and collaborators.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Testimonial
-              quote="Vikram's ability to understand complex requirements and translate them into intuitive user interfaces is unmatched. His work exceeded our expectations."
-              author="Sarah Johnson"
-              role="CEO, TechInnovate"
-            />
-            <Testimonial
-              quote="Working with Vikram was a pleasure. He not only delivered a beautiful website but also provided valuable insights that improved our overall product."
-              author="Michael Chen"
-              role="Product Manager, DataViz Inc."
-            />
-            <Testimonial
-              quote="The AI integration Vikram implemented in our app has transformed our user experience. His technical skills and creativity make him stand out."
-              author="Priya Sharma"
-              role="CTO, AIConnect"
-            />
-          </div>
-        </motion.div>
-      </section> */}
-
-      <section id="research" className="px-8 md:px-20 py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">
+            <h2 className="text-2xl md:text-3xl font-bold">
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Research & Innovations
               </span>
             </h2>
-            <p className="text-gray-400 mt-4 max-w-xl mx-auto">
+            <p className="text-gray-400 mt-4 max-w-xl mx-auto px-4">
               Explore my published research papers and patented innovations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
                 AI-Powered Surveillance System
