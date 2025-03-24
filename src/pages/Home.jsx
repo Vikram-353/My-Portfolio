@@ -83,23 +83,6 @@ const FeaturedProject = ({
   </motion.div>
 );
 
-// Testimonial component
-// const Testimonial = ({ quote, author, role }) => (
-//   <motion.div
-//     className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
-//     initial={{ opacity: 0, y: 20 }}
-//     whileInView={{ opacity: 1, y: 0 }}
-//     transition={{ duration: 0.8 }}
-//     viewport={{ once: true }}
-//   >
-//     <p className="text-gray-300 italic">{quote}</p>
-//     <div className="mt-4">
-//       <p className="text-blue-400 font-semibold">{author}</p>
-//       <p className="text-gray-400 text-sm">{role}</p>
-//     </div>
-//   </motion.div>
-// );
-
 // Animated Scene
 const AnimatedScene = () => {
   return (
@@ -219,7 +202,7 @@ function Home() {
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white">
       <section
         id="home"
-        className="pt-30 lg:pt-0 flex flex-col lg:flex-row items-center justify-between px-8 md:px-20 min-h-screen"
+        className="pt-30 lg:pt-0 flex flex-col lg:flex-row items-center justify-center gap-25  px-8 md:px-20 min-h-screen"
       >
         {/* Left Side - Text Content */}
         <motion.div
@@ -336,32 +319,44 @@ function Home() {
           </h2>
 
           <div className="mt-6 flex flex-col md:flex-row gap-8 items-center">
-            {/* Profile Image - Responsive sizing */}
-            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full p-1 flex-shrink-0 mx-auto md:mx-0">
-              <div className="w-full h-full rounded-full overflow-hidden">
-                <img
-                  src={assets.profile_pic}
-                  alt="Vikram Ranjan"
-                  className="w-full h-full object-cover"
-                />
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-200 md:h-72 lg:w-250 lg:h-80 mx-auto md:mx-0">
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 rounded-full animate-pulse p-1">
+                {/* Inner container with shadow effect */}
+                <div className="w-full h-full bg-white rounded-full p-1">
+                  {/* Image container */}
+                  <div className="w-full h-full rounded-full overflow-hidden shadow-inner ring-2 ring-white">
+                    <img
+                      src={assets.profile_pic}
+                      alt="Vikram Ranjan"
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </div>
               </div>
+
+              {/* Decorative accent dots */}
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full"></div>
+              <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-teal-400 rounded-full"></div>
             </div>
 
             {/* Text Content - Improved text alignment and spacing */}
             <div className="text-left mt-6 md:mt-0">
-              <p className="text-gray-300 text-base md:text-lg">
-                I'm a passionate front-end developer with 5+ years of experience
-                building modern web applications. My journey in tech started
-                with a fascination for creating visually appealing interfaces,
-                and evolved into a deep interest in AI and machine learning
-                integration.
+              <p className="text-gray-300 text-base md:text-lg text-justify">
+                I'm a front-end developer and AI enthusiast, passionate about
+                building modern, intelligent, and visually compelling web
+                applications. My journey started with a love for creating clean,
+                responsive, and interactive user interfaces, which gradually
+                expanded into the realms of AI, machine learning, and smart
+                systems.
               </p>
-              <p className="mt-4 text-gray-300 text-base md:text-lg">
-                I specialize in creating intuitive, responsive, and accessible
-                user interfaces that bridge the gap between complex
-                functionalities and user-friendly experiences. My goal is to
-                build applications that not only look great but also solve
-                real-world problems.
+              <p className="mt-4 text-gray-300 text-base md:text-lg text-justify">
+                With experience in React, Tailwind CSS, and MERN stack
+                development, I specialize in crafting seamless, intuitive, and
+                accessible digital experiences. Beyond UI/UX, I have a deep
+                interest in integrating AI-driven solutions into
+                applications—whether it's computer vision, predictive analytics,
+                or automation.
               </p>
 
               <div className="mt-6">
@@ -491,35 +486,34 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
             <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
-                AI-Powered Surveillance System
+                Cyberbullying Behavior Analysis
               </h3>
               <p className="text-gray-400 mt-2">
-                A research paper on using YOLOv8 for real-time suspicious
-                activity detection.
+                Analyzing cyberbullying behavior in social media using
+                supervised machine learning & natural language processing
               </p>
               <a
-                href="https://your-research-paper-link.com"
+                href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Ranjan%2C+V.%2C+Suthar%2C+K.%2C+Verma%2C+M.%2C+Salaria%2C+S.%2C+%26+Vij%2C+S.+%282024%29.+Analyzing+cyberbullying+behavior+in+social+media+using+supervised+machine+learning+%26+natural+language+processing.+Available+at+SSRN+4938099.&btnG="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline mt-4 inline-block"
               >
-                Read More →
+                Google Scholar →
               </a>
             </div>
 
             <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
-                Smart Parking Management Patent
+                Enterprise AI Chatbots
               </h3>
               <p className="text-gray-400 mt-2">
-                A patented system for detecting empty and occupied parking
-                spaces using AI.
+                Enterprise AI Chatbots: Enhancing with RAG and LLaMA 3.2
               </p>
               <a
-                href="https://your-patent-link.com"
+                href={assets.Patent}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline mt-4 inline-block"
@@ -527,24 +521,22 @@ function Home() {
                 View Patent →
               </a>
             </div>
-
-            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+            {/* <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
-                Coal Mines Safety Monitoring
+                Surviellence System
               </h3>
               <p className="text-gray-400 mt-2">
-                A research project on enhancing safety measures in coal mines
-                using IoT & AI.
+                Enterprise AI Chatbots: Enhancing with RAG and LLaMA 3.2
               </p>
               <a
-                href="https://your-research-paper-link.com"
+                href={assets.Patent}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline mt-4 inline-block"
               >
-                Learn More →
+                View Patent →
               </a>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </section>

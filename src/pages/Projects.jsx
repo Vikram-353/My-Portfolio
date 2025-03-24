@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { assets, projectsData } from "../assets/assets.js";
 
-// Project data remains the same as in your file
-
 // Project categories
 const categories = ["All", "Web App", "ML", "CV"];
 
@@ -37,8 +35,9 @@ function Projects() {
   };
 
   const closeProjectDetail = () => {
+    console.log("Closing detail mode...");
     setIsDetailMode(false);
-    setTimeout(() => setActiveProject(null), 300);
+    setActiveProject(null); // No setTimeout
   };
 
   // Animation variants
@@ -198,7 +197,7 @@ function Projects() {
               animate="visible"
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {projectsData.map((project) => (
+              {projects.map((project) => (
                 <motion.div
                   key={project.id}
                   variants={cardVariants}
@@ -323,17 +322,6 @@ function Projects() {
                           )}
                         </div>
                       </div>
-
-                      {/* Hidden overlay with call to action on hover */}
-                      <motion.div
-                        className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-gray-900/90 via-gray-800/80 to-gray-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        initial={{ opacity: 0 }}
-                        whileHover={{ opacity: 1 }}
-                      >
-                        <button className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-lg font-medium transition-colors">
-                          Explore Project
-                        </button>
-                      </motion.div>
                     </div>
                   </div>
                 </motion.div>
@@ -350,7 +338,7 @@ function Projects() {
             >
               {activeProject && (
                 <>
-                  <div className="relative">
+                  <div className="relative  pointer-events-auto">
                     <motion.img
                       src={activeProject.image}
                       alt={activeProject.title}
@@ -359,14 +347,17 @@ function Projects() {
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ duration: 0.6 }}
                     />
-                    <motion.button
-                      onClick={closeProjectDetail}
+                    {/* <motion.button
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        closeProjectDetail();
+                      }}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.3 }}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className="absolute top-4 right-4 bg-gray-900/60 hover:bg-gray-900 text-white p-2 rounded-full transition-colors"
+                      className="absolute top-4 right-4 bg-gray-900/60 hover:bg-gray-900 text-white p-2 rounded-full transition-colors cursor-pointer hover:cursor-pointer"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -382,7 +373,7 @@ function Projects() {
                           d="M6 18L18 6M6 6l12 12"
                         />
                       </svg>
-                    </motion.button>
+                    </motion.button> */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-8">
                       <motion.h2

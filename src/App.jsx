@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Gallary from "./pages/Gallary";
+
 export default function App() {
   return (
     <Router>
@@ -13,11 +14,14 @@ export default function App() {
         <Navbar />
         <div className="flex-grow">
           <Routes>
-            <Route path="/home" element={<Home />} />
+            {/* ✅ Fix: Make Home the default route */}
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallary />} />
+            {/* ✅ Optional: Handle unmatched routes
+            <Route path="*" element={<Home />} /> */}
           </Routes>
         </div>
         <Footer />
@@ -25,4 +29,3 @@ export default function App() {
     </Router>
   );
 }
-// className="flex flex-col min-h-screen bg-gray-900 text-white"

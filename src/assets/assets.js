@@ -15,12 +15,14 @@ import IotProject from "./IotProject.jpg";
 import MAITRunnerUp from "./MAITRunnerUp.jpg";
 import PosterPresentation from "./PosterPresentation.jpg";
 import UDEMY from "./UDEMY.jpg";
-// import YOGA from "./YOGA.jpg";
+import Patent from "./Patent.pdf";
 import HumanActivity from "./HumanActivity.png";
 import SIH from "./SIH.jpg";
 import JIMS from "./JIMS.jpg";
+import logo from "./logo.png";
 
 export const assets = {
+  Patent,
   profile_pic,
   avatar,
   Surveillance,
@@ -28,6 +30,7 @@ export const assets = {
   Portfolio,
   Emotion,
   DocGo,
+  logo,
   LandingPage,
   HateSpeech,
   Code4Cause,
@@ -130,19 +133,6 @@ export const projectsData = [
     featured: false,
     category: "Web App",
   },
-  // {
-  //   id: 6,
-  //   title: "Simple-MERN-Stack-CRUD-Project",
-  //   description: "A MERN based product management web app.",
-  //   longDescription:
-  //     "A MERN-based Product Management Web App is designed to streamline the process of adding, updating, organizing, and tracking products efficiently. Built using MongoDB, Express.js, React.js, and Node.js, this full-stack solution provides a user-friendly interface for managing product inventories, categories, and details. It ensures seamless communication between the front end and back end for real-time product management.",
-  //   image: assets.profile_pic, // Replace with actual image path",
-  //   //     demoLink: "https://demo.weather-dashboard.com",
-  //   codeLink: "https://github.com/username/weather-dashboard",
-  //   technologies: ["React", "Node.js", "MongoDB", "Express"],
-  //   featured: false,
-  //   category: "Web App",
-  // },
   {
     id: 7,
     title: "Landing Page",
@@ -163,8 +153,7 @@ export const projectsData = [
     description: "Hate speech detection using machine learning classifiers.",
     longDescription:
       "This project focuses on Hate Speech Detection using a dataset from Kaggle. Various classification algorithms, including Decision Tree, Gaussian Naïve Bayes, K-Nearest Neighbors (KNN), and Support Vector Classifier (SVC), were implemented to identify hateful comments. After evaluation, SVC demonstrated the best predictive performance and accuracy. The model helps in automating content moderation and preventing the spread of hate speech.",
-    //     demoLink: "https://demo.weather-dashboard.com",
-    image: assets.HateSpeech, // Replace with actual image path",
+    image: assets.HateSpeech,
 
     codeLink: "https://github.com/Vikram-353/Hate_Speech_Detection",
     technologies: [
