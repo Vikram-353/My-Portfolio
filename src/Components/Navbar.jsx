@@ -162,13 +162,13 @@ function Navbar() {
   // Active link style
   const getActiveStyle = (path) => {
     // Handle home page special case
-    if (path === "/" && location.pathname === "/") {
+    if (path === "/home" && location.pathname === "/home") {
       return true;
     }
     // For other pages
     return (
       location.pathname === path ||
-      (path !== "/" && location.pathname.startsWith(path))
+      (path !== "/home" && location.pathname.startsWith(path))
     );
   };
 
@@ -183,7 +183,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo & Name */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/home" className="flex items-center space-x-3 group">
             <div className="relative overflow-hidden rounded-full">
               <img
                 src={assets.profile_pic}

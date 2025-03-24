@@ -7,6 +7,18 @@ import Emotion from "./Emotion.png";
 import DocGo from "./DocGo.png";
 import HateSpeech from "./HateSpeech.png";
 import LandingPage from "./LandingPage.png";
+import Code4Cause from "./Code4Cause.png";
+import DTU from "./DTU.png";
+import GFGMeetUp from "./GFGMeetUp.png";
+import ICDMA from "./ICDMA.png";
+import IotProject from "./IotProject.jpg";
+import MAITRunnerUp from "./MAITRunnerUp.jpg";
+import PosterPresentation from "./PosterPresentation.jpg";
+import UDEMY from "./UDEMY.jpg";
+// import YOGA from "./YOGA.jpg";
+import HumanActivity from "./HumanActivity.png";
+import SIH from "./SIH.jpg";
+import JIMS from "./JIMS.jpg";
 
 export const assets = {
   profile_pic,
@@ -18,6 +30,17 @@ export const assets = {
   DocGo,
   LandingPage,
   HateSpeech,
+  Code4Cause,
+  GFGMeetUp,
+  DTU,
+  ICDMA,
+  IotProject,
+  MAITRunnerUp,
+  PosterPresentation,
+  UDEMY,
+  HumanActivity,
+  SIH,
+  JIMS,
 };
 
 export const projectsData = [
@@ -151,3 +174,102 @@ export const projectsData = [
     category: "ML",
   },
 ];
+
+export const galleryItems = [
+  {
+    id: 1,
+    src: UDEMY,
+    alt: "ML Course",
+    category: "Course",
+    date: "March 2024",
+    description: "Completed Machine Learning Course From Udemy. ",
+    location: "UDEMY",
+  },
+  {
+    id: 2,
+    src: GFGMeetUp,
+    alt: "Geeks For Geeks Office",
+    category: "MeetUp",
+    date: "March 2024",
+    description: "Student Meetup at Geek For Geek Office Noida.",
+    issuer: "HackWithIndia",
+  },
+  {
+    id: 3,
+    src: MAITRunnerUp,
+    alt: "TechFest",
+    category: "hackathon",
+    date: "April 2024",
+    description: "Secured 2nd Price at MAIT TechFest in Frontend Competition.",
+    location: "MAIT",
+  },
+  {
+    id: 4,
+    src: DTU,
+    alt: "DTU Hackathon",
+    category: "certificate",
+    date: "April 2024",
+    description:
+      "Successfully advanced through two rounds of Hackathon Vihaan007.",
+    issuer: "Vihaan007",
+  },
+  {
+    id: 5,
+    src: HumanActivity,
+    alt: "IC-AMSI 2024",
+    category: "certificate",
+    date: "July 2024",
+    description:
+      "Poster Presentation of Research paper on YOLOv8 Powered Security System in Conference at VIPS-TC.",
+    issuer: "IC-AMSI",
+  },
+  {
+    id: 6,
+    src: ICDMA,
+    alt: "ICDMA",
+    category: "certificate",
+    date: "June 2024",
+    description:
+      "Presented a research paper at the International Conference on Innovative Computing & Communication (ICICC) 2024.",
+    issuer: "ICDMA",
+  },
+  {
+    id: 7,
+    src: IotProject,
+    alt: "IotProject",
+    category: "presentation",
+    date: "November 2024",
+    description: "Presented iot Project on Smart GPS Tracking System.",
+    location: "VIPS-TC",
+  },
+  {
+    id: 8,
+    src: PosterPresentation,
+    alt: "Poster Presentation",
+    category: "presentation",
+    date: "August 2024",
+    description:
+      "Poster Presentation of Research paper on YOLOv8 Powered Security System in Conference at VIPS-TC.",
+    location: "VIPS-TC",
+  },
+  {
+    id: 9,
+    src: SIH,
+    alt: "SIH",
+    category: "hackathon",
+    date: "September 2024",
+    description:
+      "Qualified for the Smart India Hackathon (SIH) through the internal hackathon.",
+    location: "VIPS-TC",
+  },
+  {
+    id: 10,
+    src: JIMS,
+    alt: "JIMS",
+    category: "hackathon",
+    date: "February 2025",
+    description:
+      "Successfully advanced through two rounds of the Code Kshetra 2.0 Hackathon.",
+    location: "JIMS Rohini",
+  },
+].reverse();
