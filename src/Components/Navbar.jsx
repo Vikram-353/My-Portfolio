@@ -4,6 +4,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { RiMoonLine, RiSunLine } from "react-icons/ri";
 import { assets } from "../assets/assets.js";
+import BackButton from "../Components/BackButton";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -68,6 +69,18 @@ function Navbar() {
     setMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   // Define navigation items
   const navItems = [
     { name: "Home", path: "/" },
@@ -101,6 +114,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo & Name */}
+
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative overflow-hidden rounded-full">
               <img
@@ -196,33 +210,37 @@ function Navbar() {
                   {social.icon}
                 </a>
               ))}
+              {location.pathname !== "/" && <BackButton />}
             </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            id="menu-button"
-            className={`md:hidden p-2 rounded-lg transition duration-300 ${
-              scrolled
-                ? "text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                : "text-white hover:bg-white/10"
-            }`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? (
-              <AiOutlineClose size={24} />
-            ) : (
-              <AiOutlineMenu size={24} />
-            )}
-          </button>
+          <div className="justify-center gap-1.5 md:hidden p-2 rounded-lg transition duration-300 flex">
+            <button
+              id="menu-button"
+              className={`md:hidden p-2 rounded-lg transition duration-300 ${
+                scrolled
+                  ? "text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+                  : "text-white hover:bg-white/10"
+              }`}
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? (
+                <AiOutlineClose size={24} />
+              ) : (
+                <AiOutlineMenu size={24} />
+              )}
+            </button>
+            {location.pathname !== "/" && <BackButton />}
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`fixed top-0 right-0 w-3/4 h-full bg-white dark:bg-gray-900 transition-transform transform ${
+        className={`fixed top-0 right-0 w-3/4 min-h-screen bg-white dark:bg-gray-900 transition-transform transform ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } shadow-lg p-6 md:hidden z-50`}
       >

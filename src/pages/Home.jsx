@@ -289,7 +289,7 @@ function Home() {
 
         {/* Right Side - 3D Animation */}
         <motion.div
-          className="w-full h-[300px] md:h-[400px] lg:h-[600px] lg:w-[600px] mt-10 lg:mt-0"
+          className="w-full h-[300px] md:h-[400px] lg:h-[600px] lg:w-[600px] mt-10 lg:mt-0 md:pb-8 sm:pb-5 mb-5 md:mb-8 lg:mb-10"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 1 }}

@@ -6,10 +6,12 @@ import Contact from "./pages/Contact";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Gallary from "./pages/Gallary";
+import ScrollToTop from "./Components/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div>
         <Navbar />
         <div className="flex-grow">
@@ -20,8 +22,6 @@ export default function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallary />} />
-            {/* ✅ Optional: Handle unmatched routes
-            <Route path="*" element={<Home />} /> */}
           </Routes>
         </div>
         <Footer />

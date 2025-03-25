@@ -1,40 +1,94 @@
 import React, { useState, useEffect } from "react";
 import { color, motion } from "framer-motion";
 import { assets } from "../assets/assets";
-
+import {
+  Code,
+  Database,
+  Server,
+  Cpu,
+  Brain,
+  PenTool,
+  Layers,
+  Terminal,
+  Zap,
+  Hexagon,
+} from "lucide-react";
 function About() {
   const [activeTab, setActiveTab] = useState("skills");
 
-  // Skills with icons and proficiency levels
-  const skills = [
-    { name: "React.js", icon: "💻", level: 90 },
-    { name: "Node.js", icon: "🚀", level: 85 },
-    { name: "Express.js", icon: "⚡", level: 85 },
-    { name: "MongoDB", icon: "🍃", level: 80 },
-    { name: "Python", icon: "🐍", level: 85 },
-    { name: "Machine Learning", icon: "🧠", level: 75 },
-    { name: "Tailwind CSS", icon: "🎨", level: 90 },
-    { name: "DSA", icon: "🧠", level: 60 },
-    { name: "Javascrip", icon: "🥇", level: 85 },
-    { name: "Java", icon: "🥇", level: 85 },
-    // { name: "Three.js", icon: "🌐", level: 70 },
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
+  const skillCategories = [
+    {
+      category: "Frontend",
+      color: "bg-blue-500",
+      icon: Code,
+      skills: [
+        { name: "React.js", icon: Code },
+        { name: "Tailwind CSS", icon: PenTool },
+        { name: "JavaScript", icon: Terminal },
+      ],
+    },
+    {
+      category: "Backend",
+      color: "bg-green-500",
+      icon: Server,
+      skills: [
+        { name: "Node.js", icon: Layers },
+        { name: "Express.js", icon: Server },
+        { name: "Python", icon: Cpu },
+      ],
+    },
+    {
+      category: "Database",
+      color: "bg-purple-500",
+      icon: Database,
+      skills: [
+        { name: "MongoDB", icon: Database },
+        { name: "PostgreSQL", icon: Zap },
+      ],
+    },
+    {
+      category: "Advanced",
+      color: "bg-red-500",
+      icon: Brain,
+      skills: [
+        { name: "Machine Learning", icon: Brain },
+        { name: "Data Structures", icon: Hexagon },
+      ],
+    },
   ];
-  // Function to map skills to emojis 🎨🖥️🔍⚙️
-  const getSkillEmoji = (skill) => {
-    const emojiMap = {
-      JavaScript: "🖥️",
-      React: "⚛️",
-      "Node.js": "🌿",
-      Python: "🐍",
-      "Machine Learning": "🤖",
-      CSS: "🎨",
-      "UI/UX Design": "🖌️",
-      "Database Management": "🗄️",
-      Security: "🔒",
-      "Problem Solving": "🧠",
-    };
-    return emojiMap[skill] || "🛠️"; // Default to 🛠️ if not listed
-  };
+
+  // Skills with icons and proficiency levels
+  // const skills = [
+  //   { name: "React.js", icon: "💻", level: 90 },
+  //   { name: "Node.js", icon: "🚀", level: 85 },
+  //   { name: "Express.js", icon: "⚡", level: 85 },
+  //   { name: "MongoDB", icon: "🍃", level: 80 },
+  //   { name: "Python", icon: "🐍", level: 85 },
+  //   { name: "Machine Learning", icon: "🧠", level: 75 },
+  //   { name: "Tailwind CSS", icon: "🎨", level: 90 },
+  //   { name: "DSA", icon: "🧠", level: 60 },
+  //   { name: "Javascrip", icon: "🥇", level: 85 },
+  //   { name: "Java", icon: "🥇", level: 85 },
+  //   // { name: "Three.js", icon: "🌐", level: 70 },
+  // ];
+  // // Function to map skills to emojis 🎨🖥️🔍⚙️
+  // const getSkillEmoji = (skill) => {
+  //   const emojiMap = {
+  //     JavaScript: "🖥️",
+  //     React: "⚛️",
+  //     "Node.js": "🌿",
+  //     Python: "🐍",
+  //     "Machine Learning": "🤖",
+  //     CSS: "🎨",
+  //     "UI/UX Design": "🖌️",
+  //     "Database Management": "🗄️",
+  //     Security: "🔒",
+  //     "Problem Solving": "🧠",
+  //   };
+  //   return emojiMap[skill] || "🛠️"; // Default to 🛠️ if not listed
+  // };
 
   // Experience details with dates and descriptions
   const experiences = [
@@ -94,7 +148,7 @@ function About() {
           transition={{ type: "spring", stiffness: 300 }}
         >
           <img
-            src={assets.avatar}
+            src={assets.profile_pic}
             alt="Vikram Ranjan"
             className="w-full h-full object-cover"
           />
@@ -129,7 +183,7 @@ function About() {
           {/* Social Links */}
           <div className="flex justify-center md:justify-start space-x-4">
             <motion.a
-              href="https://github.com/yourusername"
+              href="https://github.com/Vikram-353"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-600 transition-colors"
@@ -149,7 +203,7 @@ function About() {
               </svg>
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/vikram-ranjan890"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-600 transition-colors"
@@ -165,7 +219,7 @@ function About() {
               </svg>
             </motion.a>
             <motion.a
-              href="mailto:youremail@example.com"
+              href="mailto:vikramranjan71122@gmail.com"
               className="text-gray-400 hover:text-blue-600 transition-colors"
               whileHover={{ scale: 1.2 }}
             >
@@ -227,56 +281,69 @@ function About() {
         </div>
       </div>
 
-      {/* Skills Section */}
       {activeTab === "skills" && (
         <motion.div
-          className="bg-grey-950 rounded-lg shadow-lg p-4 sm:p-6 md:p-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-8"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, type: "spring" }}
         >
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-100">
-            🚀 Technical Skills
+          <h2 className="text-3xl font-bold mb-8 text-gray-100 text-center flex items-center justify-center">
+            <Zap className="mr-4 text-blue-500" size={40} />
+            My Technical Skills
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                className="relative bg-gray-900 p-3 sm:p-4 rounded-lg text-gray-100"
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              >
-                {/* Percentage in Top-Right Corner */}
-                <span className="absolute top-2 right-2 text-xs sm:text-sm font-semibold text-gray-300">
-                  {skill.level}%
-                </span>
 
-                {/* Skill Name & Emoji */}
-                <div className="flex items-center mb-2">
-                  <span className="text-xl sm:text-2xl mr-2">
-                    {getSkillEmoji(skill.name)}
-                  </span>
-                  <h3 className="text-base sm:text-lg font-semibold">
-                    {skill.name}
-                  </h3>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {skillCategories.map((category, catIndex) => {
+              const CategoryIcon = category.icon;
+              return (
+                <motion.div
+                  key={catIndex}
+                  className="bg-gray-800 cursor-pointer rounded-xl p-6 shadow-lg"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 10px 20px rgba(0,0,0,0.3)",
+                  }}
+                >
+                  <div className="flex items-center mb-4">
+                    <CategoryIcon
+                      className={`mr-3 ${category.color}`}
+                      size={32}
+                    />
+                    <h3 className="text-xl font-semibold text-gray-200">
+                      {category.category}
+                    </h3>
+                  </div>
 
-                {/* Progress Bar */}
-                <div className="relative w-full bg-gray-700 rounded-full h-3 sm:h-4">
-                  <motion.div
-                    className="bg-blue-600 h-3 sm:h-4 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1 }}
-                  ></motion.div>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="space-y-3">
+                    {category.skills.map((skill, skillIndex) => {
+                      const SkillIcon = skill.icon;
+                      return (
+                        <motion.div
+                          key={skillIndex}
+                          className="flex items-center space-x-3 p-2 rounded-lg transition-all duration-100"
+                          whileHover={{
+                            x: 10,
+                            backgroundColor: "rgba(255,255,255,0.1)",
+                          }}
+                          onHoverStart={() => setHoveredSkill(skill)}
+                          onHoverEnd={() => setHoveredSkill(null)}
+                        >
+                          <SkillIcon className="text-gray-400" size={24} />
+                          <span className="text-gray-300 font-medium">
+                            {skill.name}
+                          </span>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       )}
 
-      {/* Experience Section */}
       {activeTab === "experience" && (
         <motion.div
           className="bg-gray-900 text-gray-100 rounded-lg shadow-lg p-4 sm:p-6 md:p-8"

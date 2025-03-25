@@ -111,7 +111,7 @@ function Footer() {
               Have a project in mind? Let's talk!
             </p>
             <a
-              href="mailto:vikram@example.com"
+              href="mailto:vikramranjan71122@gmail.com"
               className="text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
             >
               vikramranjan71122@gmail.com
