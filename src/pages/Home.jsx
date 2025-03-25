@@ -202,7 +202,7 @@ function Home() {
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white">
       <section
         id="home"
-        className="pt-30 lg:pt-0 flex flex-col lg:flex-row items-center justify-center gap-25  px-8 md:px-20 min-h-screen"
+        className="pt-30 lg:pt-0 flex flex-col lg:flex-row items-center justify-center  gap-20  px-8 md:px-20 min-h-screen"
       >
         {/* Left Side - Text Content */}
         <motion.div
@@ -247,7 +247,7 @@ function Home() {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4"
+            className="mt-8 flex flex-wrap justify-center lg:justify-start gap-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 1 }}

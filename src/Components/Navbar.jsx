@@ -171,11 +171,11 @@ function Navbar() {
               {[
                 {
                   icon: <FaGithub size={18} />,
-                  url: "https://github.com/vikramranjan",
+                  url: "https://github.com/Vikram-353",
                 },
                 {
                   icon: <FaLinkedin size={18} />,
-                  url: "https://linkedin.com/in/vikramranjan",
+                  url: "https://www.linkedin.com/in/vikram-ranjan890/",
                 },
                 // {
                 //   icon: <FaTwitter size={18} />,
@@ -272,28 +272,24 @@ function Navbar() {
         <div className="absolute bottom-8 left-0 right-0 px-6">
           <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
             {/* Dark mode toggle */}
-            <button
+            {/* <button
               onClick={() => setDarkMode(!darkMode)}
               className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300"
             >
               {darkMode ? <RiSunLine size={20} /> : <RiMoonLine size={20} />}
               <span>{darkMode ? "Light Mode" : "Dark Mode"}</span>
-            </button>
+            </button> */}
 
             {/* Social icons */}
             <div className="flex space-x-2">
               {[
                 {
                   icon: <FaGithub size={20} />,
-                  url: "https://github.com/vikramranjan",
+                  url: "https://github.com/Vikram-353",
                 },
                 {
                   icon: <FaLinkedin size={20} />,
-                  url: "https://linkedin.com/in/vikramranjan",
-                },
-                {
-                  icon: <FaTwitter size={20} />,
-                  url: "https://twitter.com/vikramranjan",
+                  url: "https://linkedin.com/in/vikram-ranjan890",
                 },
               ].map((social, index) => (
                 <a

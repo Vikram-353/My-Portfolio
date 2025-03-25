@@ -214,11 +214,12 @@ function Projects() {
                       <motion.img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-auto object-cover rounded-lg"
                         variants={imageVariants}
                         initial="rest"
                         whileHover="hover"
                       />
+
                       {project.featured && (
                         <motion.span
                           initial={{ opacity: 0, y: -10 }}

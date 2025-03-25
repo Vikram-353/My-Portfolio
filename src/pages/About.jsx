@@ -19,6 +19,22 @@ function About() {
     { name: "Java", icon: "🥇", level: 85 },
     // { name: "Three.js", icon: "🌐", level: 70 },
   ];
+  // Function to map skills to emojis 🎨🖥️🔍⚙️
+  const getSkillEmoji = (skill) => {
+    const emojiMap = {
+      JavaScript: "🖥️",
+      React: "⚛️",
+      "Node.js": "🌿",
+      Python: "🐍",
+      "Machine Learning": "🤖",
+      CSS: "🎨",
+      "UI/UX Design": "🖌️",
+      "Database Management": "🗄️",
+      Security: "🔒",
+      "Problem Solving": "🧠",
+    };
+    return emojiMap[skill] || "🛠️"; // Default to 🛠️ if not listed
+  };
 
   // Experience details with dates and descriptions
   const experiences = [
@@ -220,27 +236,39 @@ function About() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-100">
-            Technical Skills
+            🚀 Technical Skills
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-900 p-3 sm:p-4 rounded-lg text-gray-100"
+                className="relative bg-gray-900 p-3 sm:p-4 rounded-lg text-gray-100"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
+                {/* Percentage in Top-Right Corner */}
+                <span className="absolute top-2 right-2 text-xs sm:text-sm font-semibold text-gray-300">
+                  {skill.level}%
+                </span>
+
+                {/* Skill Name & Emoji */}
                 <div className="flex items-center mb-2">
-                  <span className="text-xl sm:text-2xl mr-2">{skill.icon}</span>
+                  <span className="text-xl sm:text-2xl mr-2">
+                    {getSkillEmoji(skill.name)}
+                  </span>
                   <h3 className="text-base sm:text-lg font-semibold">
                     {skill.name}
                   </h3>
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
-                  <div
-                    className="bg-blue-600 h-2 sm:h-2.5 rounded-full"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
+
+                {/* Progress Bar */}
+                <div className="relative w-full bg-gray-700 rounded-full h-3 sm:h-4">
+                  <motion.div
+                    className="bg-blue-600 h-3 sm:h-4 rounded-full"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1 }}
+                  ></motion.div>
                 </div>
               </motion.div>
             ))}

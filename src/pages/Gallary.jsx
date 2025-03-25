@@ -457,7 +457,7 @@ const GalleryItem = ({ item, onClick, index }) => {
           <CategoryBadge category={item.category} />
         </div>
 
-        <div className="w-full aspect-video overflow-hidden">
+        <div className="w-full  aspect-video overflow-hidden">
           <img
             src={item.src}
             alt={item.alt}
