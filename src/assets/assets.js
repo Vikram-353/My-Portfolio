@@ -94,23 +94,23 @@ export const projectsData = [
     demoLink: "#",
     codeLink: "https://github.com/Vikram-353/My-Portfolio",
     technologies: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
-    featured: false,
+    featured: true,
     category: "Web App",
   },
-  {
-    id: 4,
-    title: "Emotion Detection",
-    description:
-      "A web application leveraging deep learning and computer vision to analyze facial expressions and detect mood and emotions.",
-    longDescription:
-      "A web application utilizing cv2 for image processing and Ultralytics YOLOv8 for real-time facial expression detection. It employs deep learning models to analyze emotions and mood from facial images. Gemenai enhances prediction accuracy, ensuring reliable emotion recognition.",
-    image: assets.Emotion, // Replace with actual image path
-    // demoLink: "https://demo.ai-image-generator.com",
-    codeLink: "https://github.com/Vikram-353/Emotion-Detection",
-    technologies: ["cv2", "Ultralytics", "Yolov8", "Gemenai"],
-    featured: true,
-    category: "CV",
-  },
+  // {
+  //   id: 4,
+  //   title: "Emotion Detection",
+  //   description:
+  //     "A web application leveraging deep learning and computer vision to analyze facial expressions and detect mood and emotions.",
+  //   longDescription:
+  //     "A web application utilizing cv2 for image processing and Ultralytics YOLOv8 for real-time facial expression detection. It employs deep learning models to analyze emotions and mood from facial images. Gemenai enhances prediction accuracy, ensuring reliable emotion recognition.",
+  //   image: assets.Emotion, // Replace with actual image path
+  //   // demoLink: "https://demo.ai-image-generator.com",
+  //   codeLink: "https://github.com/Vikram-353/Emotion-Detection",
+  //   technologies: ["cv2", "Ultralytics", "Yolov8", "Gemenai"],
+  //   featured: true,
+  //   category: "CV",
+  // },
   {
     id: 5,
     title: "Doctor Management App",
