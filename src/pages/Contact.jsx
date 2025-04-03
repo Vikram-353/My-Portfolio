@@ -75,7 +75,7 @@ function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border placeholder-gray-500 border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-gray-800 border text-gray-300  placeholder-gray-500 border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your name"
                     required
                   />
@@ -90,7 +90,7 @@ function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border placeholder-gray-500 border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3  text-gray-300  bg-gray-800 border placeholder-gray-500 border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -106,7 +106,7 @@ function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 placeholder-gray-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-gray-800 border text-gray-300  border-gray-700 placeholder-gray-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="What's this about?"
                 />
               </div>
@@ -121,7 +121,7 @@ function Contact() {
                   onChange={handleChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500"
+                  className="w-full px-4 py-3 bg-gray-800 border text-gray-300  border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>

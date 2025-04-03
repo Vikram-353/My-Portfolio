@@ -117,7 +117,7 @@ export const projectsData = [
     description:
       "A MERN-based doctor management web app for streamlined scheduling and patient management.",
     longDescription:
-      "A **MERN-based Doctor Management Web App** enables seamless appointment scheduling and management. Built with **React, Node.js, Express, and MongoDB**, it supports three user roles: **Patients** can book appointments, **Doctors** can manage their schedules, and **Admins** oversee doctors. **JWT Authentication** ensures secure access, while **Cloudinary** handles image uploads. **Postman** is used for API testing and development.",
+      "A MERN-based Doctor Management Web App enables seamless appointment scheduling and management. Built with React, Node.js, Express, and MongoDB, it supports three user roles: Patients can book appointments, Doctors can manage their schedules, and Admins oversee doctors. JWT Authentication ensures secure access, while Cloudinary handles image uploads. Postman is used for API testing and development.",
     image: assets.DocGo, // Replace with actual image path
     // demoLink: "https://demo.task-manager.com",
     codeLink: "https://github.com/Vikram-353/DocGo",

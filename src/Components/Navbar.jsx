@@ -242,7 +242,7 @@ function Navbar() {
         id="mobile-menu"
         className={`fixed top-0 right-0 w-3/4 min-h-screen bg-white dark:bg-gray-900 transition-transform transform ${
           menuOpen ? "translate-x-0" : "translate-x-full"
-        } shadow-lg p-6 md:hidden z-50`}
+        } shadow-lg p-6 md:hidden z-50 pb-16`}
       >
         <div className="flex justify-between items-center mb-8">
           <Link
@@ -287,7 +287,7 @@ function Navbar() {
         </div>
 
         {/* Mobile bottom actions */}
-        <div className="absolute bottom-8 left-0 right-0 px-6">
+        <div className="absolute bottom-12 left-0 right-0 max-h-screen px-6">
           <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
             {/* Dark mode toggle */}
             {/* <button
@@ -299,7 +299,7 @@ function Navbar() {
             </button> */}
 
             {/* Social icons */}
-            <div className="flex space-x-2">
+            {/* <div className="flex space-x-2">
               {[
                 {
                   icon: <FaGithub size={20} />,
@@ -320,6 +320,34 @@ function Navbar() {
                   {social.icon}
                 </a>
               ))}
+            </div> */}
+
+            <div className="fixed bottom-0 left-0 right-0 px-6 py-3 bg-white dark:bg-gray-900 shadow-md">
+              <div className="flex items-center justify-between border-t border-gray-200 dark:border-gray-700 pt-4">
+                {/* Social icons */}
+                <div className="flex space-x-4">
+                  {[
+                    {
+                      icon: <FaGithub size={24} />,
+                      url: "https://github.com/Vikram-353",
+                    },
+                    {
+                      icon: <FaLinkedin size={24} />,
+                      url: "https://linkedin.com/in/vikram-ranjan890",
+                    },
+                  ].map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition duration-300"
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
