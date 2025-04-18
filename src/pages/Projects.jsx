@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { assets, projectsData } from "../assets/assets.js";
 
 // Project categories
-const categories = ["All", "Web App", "ML", "CV"];
+const categories = ["All", "Web App", "ML", "CV", "Android App"];
 
 function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");

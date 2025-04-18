@@ -480,7 +480,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
                 Cyberbullying Behavior Analysis
@@ -515,22 +515,24 @@ function Home() {
                 View Patent →
               </a>
             </div>
-            {/* <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
-                Surviellence System
+                AQI Prediction and Sustainable Pollution Control Solutions.
               </h3>
               <p className="text-gray-400 mt-2">
-                Enterprise AI Chatbots: Enhancing with RAG and LLaMA 3.2
+                Performance Evaluation of Various Machine Learning Models and
+                Its Implications for Informed Air Policy Decisions: A
+                Comparative Study for Delhi
               </p>
               <a
-                href={assets.Patent}
+                href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8fP0PUUAAAAJ&citation_for_view=8fP0PUUAAAAJ:u-x6o8ySG0sC"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:underline mt-4 inline-block"
               >
-                View Patent →
+                Google Scholar →
               </a>
-            </div> */}
+            </div>
           </div>
         </motion.div>
       </section>

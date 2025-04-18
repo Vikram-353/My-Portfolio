@@ -162,6 +162,25 @@ export const projectsData = [
     featured: false,
     category: "ML",
   },
+  {
+    id: 9,
+    title: "Task Manager",
+    description: "Task manager app using flutter, django",
+    longDescription:
+      "A task management app built with Flutter and Django, offering CRUD operations, user authentication with SimpleJWT, task filtering, and local notifications for overdue tasks.",
+    image: assets.HateSpeech,
+
+    codeLink: "https://github.com/Vikram-353/Task-Manager/",
+    technologies: [
+      "Flutter",
+      "Django",
+      "MySQL",
+      "SimpleJWT",
+      "Local Notifications",
+    ],
+    featured: false,
+    category: "ML",
+  },
 ];
 
 export const galleryItems = [
