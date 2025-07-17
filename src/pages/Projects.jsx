@@ -196,136 +196,140 @@ function Projects() {
               animate="visible"
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {projects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  variants={cardVariants}
-                  whileHover="hover"
-                  layout
-                >
-                  <div
-                    className="bg-gray-800/80 backdrop-blur-lg rounded-xl overflow-hidden shadow-xl h-full 
+              {projects
+                .map((project) => (
+                  <motion.div
+                    key={project.id}
+                    variants={cardVariants}
+                    whileHover="hover"
+                    layout
+                  >
+                    <div
+                      className="bg-gray-800/80 backdrop-blur-lg rounded-xl overflow-hidden shadow-xl h-full 
                     border border-gray-700 hover:border-blue-500/50 transition-all duration-300
                     relative group"
-                    onClick={() => openProjectDetail(project)}
-                  >
-                    <div className="relative overflow-hidden h-56">
-                      <motion.img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-auto object-cover rounded-lg"
-                        variants={imageVariants}
-                        initial="rest"
-                        whileHover="hover"
-                      />
-
-                      {project.featured && (
-                        <motion.span
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.2 }}
-                          className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10"
-                        >
-                          Featured
-                        </motion.span>
-                      )}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"
-                        whileHover={{ opacity: 0.5 }}
-                      ></motion.div>
-                    </div>
-
-                    <div className="p-6 relative">
-                      {/* Project info */}
-                      <h3 className="text-xl font-semibold text-white">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-300 mt-3 line-clamp-2 prose prose-sm">
-                        {project.description}
-                      </p>
-
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {project.technologies.slice(0, 3).map((tech, index) => (
-                          <motion.span
-                            key={index}
-                            custom={index}
-                            variants={techBadgeVariants}
-                            className="bg-gray-700/70 text-gray-300 text-xs px-2.5 py-1 rounded-full"
-                          >
-                            {tech}
-                          </motion.span>
-                        ))}
-                        {project.technologies.length > 3 && (
-                          <motion.span
-                            variants={techBadgeVariants}
-                            custom={3}
-                            className="bg-gray-700/70 text-gray-300 text-xs px-2.5 py-1 rounded-full"
-                          >
-                            +{project.technologies.length - 3}
-                          </motion.span>
-                        )}
-                      </div>
-
-                      {/* Action buttons */}
-                      <div className="mt-6 flex justify-between items-center">
-                        <motion.button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            openProjectDetail(project);
-                          }}
-                          variants={buttonVariants}
+                      onClick={() => openProjectDetail(project)}
+                    >
+                      <div className="relative overflow-hidden h-56">
+                        <motion.img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-auto object-cover rounded-lg"
+                          variants={imageVariants}
                           initial="rest"
                           whileHover="hover"
-                          whileTap="tap"
-                          className="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center"
-                        >
-                          View Details
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
+                        />
+
+                        {project.featured && (
+                          <motion.span
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10"
                           >
-                            <path
-                              fillRule="evenodd"
-                              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </motion.button>
-                        <div className="flex gap-2">
-                          {project.codeLink && (
-                            <motion.a
-                              href={project.codeLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={(e) => e.stopPropagation()}
-                              variants={buttonVariants}
-                              initial="rest"
-                              whileHover="hover"
-                              whileTap="tap"
-                              className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-4 w-4 text-gray-300"
-                                viewBox="0 0 20 20"
-                                fill="currentColor"
+                            Featured
+                          </motion.span>
+                        )}
+                        <motion.div
+                          className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-80"
+                          whileHover={{ opacity: 0.5 }}
+                        ></motion.div>
+                      </div>
+
+                      <div className="p-6 relative">
+                        {/* Project info */}
+                        <h3 className="text-xl font-semibold text-white">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-300 mt-3 line-clamp-2 prose prose-sm">
+                          {project.description}
+                        </p>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {project.technologies
+                            .slice(0, 3)
+                            .map((tech, index) => (
+                              <motion.span
+                                key={index}
+                                custom={index}
+                                variants={techBadgeVariants}
+                                className="bg-gray-700/70 text-gray-300 text-xs px-2.5 py-1 rounded-full"
                               >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                            </motion.a>
+                                {tech}
+                              </motion.span>
+                            ))}
+                          {project.technologies.length > 3 && (
+                            <motion.span
+                              variants={techBadgeVariants}
+                              custom={3}
+                              className="bg-gray-700/70 text-gray-300 text-xs px-2.5 py-1 rounded-full"
+                            >
+                              +{project.technologies.length - 3}
+                            </motion.span>
                           )}
+                        </div>
+
+                        {/* Action buttons */}
+                        <div className="mt-6 flex justify-between items-center">
+                          <motion.button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              openProjectDetail(project);
+                            }}
+                            variants={buttonVariants}
+                            initial="rest"
+                            whileHover="hover"
+                            whileTap="tap"
+                            className="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center"
+                          >
+                            View Details
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          </motion.button>
+                          <div className="flex gap-2">
+                            {project.codeLink && (
+                              <motion.a
+                                href={project.codeLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                variants={buttonVariants}
+                                initial="rest"
+                                whileHover="hover"
+                                whileTap="tap"
+                                className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-4 w-4 text-gray-300"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              </motion.a>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))
+                .reverse()}
             </motion.div>
           ) : (
             <motion.div

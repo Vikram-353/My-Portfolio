@@ -20,6 +20,8 @@ import HumanActivity from "./HumanActivity.png";
 import SIH from "./SIH.jpg";
 import JIMS from "./JIMS.jpg";
 import logo from "./logo.png";
+import app from "./app.png";
+import resume from "./Vikram Ranjan Resume.pdf";
 
 export const assets = {
   Patent,
@@ -44,6 +46,8 @@ export const assets = {
   HumanActivity,
   SIH,
   JIMS,
+  app,
+  resume,
 };
 
 export const projectsData = [
@@ -80,7 +84,7 @@ export const projectsData = [
     // demoLink: "https://demo.coalminesmanager.com",
     codeLink: "https://github.com/Vikram-353/Code-Streak-SIH-2024/tree/main",
     technologies: ["React", "Node.js", "MongoDB", "Express", "Socket.io"],
-    featured: true,
+    featured: false,
     category: "Web App",
   },
   {
@@ -130,7 +134,7 @@ export const projectsData = [
       "Cloudinary",
       "JWT Authentication",
     ],
-    featured: false,
+    featured: true,
     category: "Web App",
   },
   {
@@ -168,7 +172,7 @@ export const projectsData = [
     description: "Task manager app using flutter, django",
     longDescription:
       "A task management app built with Flutter and Django, offering CRUD operations, user authentication with SimpleJWT, task filtering, and local notifications for overdue tasks.",
-    image: assets.HateSpeech,
+    image: assets.app,
 
     codeLink: "https://github.com/Vikram-353/Task-Manager/",
     technologies: [
@@ -179,7 +183,7 @@ export const projectsData = [
       "Local Notifications",
     ],
     featured: false,
-    category: "ML",
+    category: "Android App",
   },
 ];
 

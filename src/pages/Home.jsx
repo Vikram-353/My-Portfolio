@@ -258,6 +258,12 @@ function Home() {
             >
               View Projects
             </Link>
+            <a
+              href={assets.resume}
+              className="bg-blue-600 px-8 py-3 rounded-lg text-lg hover:bg-blue-500 transition duration-300 shadow-lg hover:shadow-blue-500/20"
+            >
+              Download Resume
+            </a>
           </motion.div>
 
           <motion.div
@@ -501,22 +507,6 @@ function Home() {
 
             <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-white">
-                Enterprise AI Chatbots
-              </h3>
-              <p className="text-gray-400 mt-2">
-                Enterprise AI Chatbots: Enhancing with RAG and LLaMA 3.2
-              </p>
-              <a
-                href={assets.Patent}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline mt-4 inline-block"
-              >
-                View Patent →
-              </a>
-            </div>
-            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-white">
                 AQI Prediction and Sustainable Pollution Control Solutions.
               </h3>
               <p className="text-gray-400 mt-2">
@@ -531,6 +521,46 @@ function Home() {
                 className="text-blue-400 hover:underline mt-4 inline-block"
               >
                 Google Scholar →
+              </a>
+            </div>
+
+            {/* //Journal  */}
+            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-white">
+                Real time image processing and smart healthcare using
+                eXplainable artificial intelligence (XAI)
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Conducted qualitative and quantitative analysis for mental
+                stress detection using physiological and behavioral data.
+                Integrated advanced AI techniques for enhanced emotion
+                recognition accuracy. Compared ensemble learning models and
+                achieved improved performance using Deep Neural Networks (DNN).
+              </p>
+              <a
+                href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=8fP0PUUAAAAJ&citation_for_view=8fP0PUUAAAAJ:d1gkVwhDpl0C"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline mt-4 inline-block"
+              >
+                Google Scholar →
+              </a>
+            </div>
+
+            <div className="p-6 border border-gray-700 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-white">
+                Enterprise AI Chatbots
+              </h3>
+              <p className="text-gray-400 mt-2">
+                Enterprise AI Chatbots: Enhancing with RAG and LLaMA 3.2
+              </p>
+              <a
+                href={assets.Patent}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline mt-4 inline-block"
+              >
+                View Patent →
               </a>
             </div>
           </div>
