@@ -21,7 +21,7 @@ function About() {
 
   const skillCategories = [
     {
-      category: "Frontend",
+      category: "Frontend", 
       color: "bg-blue-500",
       icon: Code,
       skills: [
@@ -46,7 +46,7 @@ function About() {
       icon: Database,
       skills: [
         { name: "MongoDB", icon: Database },
-        { name: "PostgreSQL", icon: Zap },
+        { name: "MySQL", icon: Zap },
       ],
     },
     {
@@ -59,37 +59,6 @@ function About() {
       ],
     },
   ];
-
-  // Skills with icons and proficiency levels
-  // const skills = [
-  //   { name: "React.js", icon: "💻", level: 90 },
-  //   { name: "Node.js", icon: "🚀", level: 85 },
-  //   { name: "Express.js", icon: "⚡", level: 85 },
-  //   { name: "MongoDB", icon: "🍃", level: 80 },
-  //   { name: "Python", icon: "🐍", level: 85 },
-  //   { name: "Machine Learning", icon: "🧠", level: 75 },
-  //   { name: "Tailwind CSS", icon: "🎨", level: 90 },
-  //   { name: "DSA", icon: "🧠", level: 60 },
-  //   { name: "Javascrip", icon: "🥇", level: 85 },
-  //   { name: "Java", icon: "🥇", level: 85 },
-  //   // { name: "Three.js", icon: "🌐", level: 70 },
-  // ];
-  // // Function to map skills to emojis 🎨🖥️🔍⚙️
-  // const getSkillEmoji = (skill) => {
-  //   const emojiMap = {
-  //     JavaScript: "🖥️",
-  //     React: "⚛️",
-  //     "Node.js": "🌿",
-  //     Python: "🐍",
-  //     "Machine Learning": "🤖",
-  //     CSS: "🎨",
-  //     "UI/UX Design": "🖌️",
-  //     "Database Management": "🗄️",
-  //     Security: "🔒",
-  //     "Problem Solving": "🧠",
-  //   };
-  //   return emojiMap[skill] || "🛠️"; // Default to 🛠️ if not listed
-  // };
 
   // Experience details with dates and descriptions
   const experiences = [
@@ -121,6 +90,13 @@ function About() {
         </>
       ),
     },
+    {
+      title: "Data Science",
+      company: "Celebal Technologies",
+      period: "Jun 2025 - Aug 2025",
+      description:
+        "During my internship, I gained hands-on experience in Python programming, data science, feature engineering, and regression analysis. I also explored clustering techniques, SQL basics, and the fundamentals of Generative AI (GenAI) through practical projects and weekly modules.",
+    },
   ];
 
   // Education details
@@ -129,7 +105,7 @@ function About() {
       degree: "B.Tech in Artificial Intelliegence and Data Science",
       institution: "Vivekananda Institute of Professional Studies",
       period: "2022 - 2026",
-      gpa: "8.95/10",
+      gpa: "8.98/10",
     },
   ];
 
@@ -137,7 +113,7 @@ function About() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0 }}
       className="px-4 sm:px-6 py-12 sm:py-20 w-full min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900"
     >
       {/* Hero Section */}
@@ -248,7 +224,7 @@ function About() {
         <div className="inline-flex rounded-md shadow-sm" role="group">
           <button
             type="button"
-            className={`px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium border ${
+            className={`px-3 sm:px-6 py-2 sm:py-3 text-xs hover:cursor-pointer sm:text-sm font-medium border ${
               activeTab === "skills"
                 ? "bg-blue-600 text-white"
                 : "bg-white text-gray-700 hover:bg-gray-50"
@@ -259,7 +235,7 @@ function About() {
           </button>
           <button
             type="button"
-            className={`px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium border-t border-b ${
+            className={`px-3 sm:px-6 py-2 sm:py-3 text-xs  hover:cursor-pointer sm:text-sm font-medium border-t border-b ${
               activeTab === "experience"
                 ? "bg-blue-600 text-white"
                 : "bg-white text-gray-700 hover:bg-gray-50"
@@ -270,7 +246,7 @@ function About() {
           </button>
           <button
             type="button"
-            className={`px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-sm font-medium border ${
+            className={`px-3 sm:px-6 py-2 sm:py-3 text-xs  hover:cursor-pointer sm:text-sm font-medium border ${
               activeTab === "education"
                 ? "bg-blue-600 text-white"
                 : "bg-white text-gray-700 hover:bg-gray-50"
@@ -347,73 +323,68 @@ function About() {
 
       {activeTab === "experience" && (
         <motion.div
-          className="bg-gray-900 text-gray-100 rounded-lg shadow-lg p-4 sm:p-6 md:p-8"
+          className="bg-gray-900 text-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-200">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-blue-400">
             Work Experience
           </h2>
-          <div className="space-y-6 sm:space-y-8">
+          <div className="space-y-8">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                className="relative pl-6 sm:pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-blue-600 before:rounded-full"
+                className="relative pl-6 sm:pl-8 border-l-4 border-blue-600"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.2, duration: 0.5 }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-gray-100">
-                  {exp.title}
-                </h3>
-                <div className="flex flex-col sm:flex-row sm:items-center text-gray-50 mb-2">
-                  <span>{exp.company}</span>
-                  <span className="hidden sm:inline mx-2">•</span>
-                  <span className="text-xs sm:text-sm">{exp.period}</span>
+                <div className="ml-2">
+                  <h3 className="text-xl font-semibold text-gray-100">
+                    {exp.title}
+                  </h3>
+                  <div className="text-sm text-gray-400 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+                    <span>{exp.company}</span>
+                    <span className="hidden sm:inline">•</span>
+                    <span>{exp.period}</span>
+                  </div>
+                  <p className="text-gray-300 text-base leading-relaxed">
+                    {exp.description}
+                  </p>
                 </div>
-                <p className="text-sm sm:text-base text-gray-100">
-                  {exp.description}
-                </p>
               </motion.div>
             ))}
           </div>
         </motion.div>
       )}
 
-      {/* Education Section */}
       {activeTab === "education" && (
         <motion.div
-          className="bg-gray-900 text-gray-100 rounded-lg shadow-lg p-4 sm:p-6 md:p-8"
+          className="bg-gray-900 text-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-gray-200">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-blue-400">
             Education
           </h2>
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-6">
             {education.map((edu, index) => (
               <motion.div
                 key={index}
-                className="border-l-4 border-blue-600 pl-3 sm:pl-4"
+                className="border-l-4 border-blue-600 pl-5"
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
+                transition={{ delay: 0.2 * index, duration: 0.5 }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-gray-100">
-                  {edu.degree}
-                </h3>
-                <div className="flex flex-col sm:flex-row sm:items-center text-gray-100 mb-1">
+                <h3 className="text-xl font-semibold">{edu.degree}</h3>
+                <div className="text-sm text-gray-400 flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
                   <span>{edu.institution}</span>
-                  <span className="hidden sm:inline mx-2">•</span>
-                  <span className="text-xs sm:text-sm">{edu.period}</span>
+                  <span className="hidden sm:inline">•</span>
+                  <span>{edu.period}</span>
                 </div>
-                <p className="text-sm sm:text-base text-gray-100">
-                  GPA: {edu.gpa}
-                </p>
-
-                {/* Styled Link */}
+                <p className="text-base text-gray-300 mb-1">GPA: {edu.gpa}</p>
                 <a
                   href="https://www.ipuranklist.com/student/09917711922"
                   target="_blank"
@@ -426,13 +397,15 @@ function About() {
             ))}
           </div>
 
-          {/* Certifications */}
-          <div className="mt-6 sm:mt-8">
-            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-200">
+          <div className="mt-10">
+            <h3 className="text-xl font-semibold mb-4 text-blue-400">
               Certifications
             </h3>
-            <ul className="space-y-1 sm:space-y-2 list-disc list-inside text-sm sm:text-base text-gray-100">
+            <ul className="list-disc list-inside text-base text-gray-300 space-y-2">
               <li>Certified in Machine Learning by Udemy.</li>
+              <li>
+                CDAC certificate for Foundation of Data Science and Big Data.
+              </li>
             </ul>
           </div>
         </motion.div>

@@ -22,6 +22,10 @@ import JIMS from "./JIMS.jpg";
 import logo from "./logo.png";
 import app from "./app.png";
 import resume from "./Vikram Ranjan Resume.pdf";
+import CDAC from "./CDAC.png";
+import rag_app from "./rag-app.png";
+import straemspeak from "./streamspeak.png";
+import CSI from "./CSI.jpg";
 
 export const assets = {
   Patent,
@@ -48,6 +52,9 @@ export const assets = {
   JIMS,
   app,
   resume,
+  rag_app,
+  straemspeak,
+  CSI,
 };
 
 export const projectsData = [
@@ -70,7 +77,7 @@ export const projectsData = [
       "TensorFlow",
       "Flask",
     ],
-    featured: true,
+    featured: false,
     category: "CV",
   },
   {
@@ -98,22 +105,22 @@ export const projectsData = [
     demoLink: "#",
     codeLink: "https://github.com/Vikram-353/My-Portfolio",
     technologies: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
-    featured: true,
+    featured: false,
     category: "Web App",
   },
   // {
   //   id: 4,
-  //   title: "Emotion Detection",
-  //   description:
-  //     "A web application leveraging deep learning and computer vision to analyze facial expressions and detect mood and emotions.",
+  //   title: "StreamSpeak",
+  //   description: "Text and Vedio Chat Application ",
   //   longDescription:
-  //     "A web application utilizing cv2 for image processing and Ultralytics YOLOv8 for real-time facial expression detection. It employs deep learning models to analyze emotions and mood from facial images. Gemenai enhances prediction accuracy, ensuring reliable emotion recognition.",
-  //   image: assets.Emotion, // Replace with actual image path
-  //   // demoLink: "https://demo.ai-image-generator.com",
-  //   codeLink: "https://github.com/Vikram-353/Emotion-Detection",
-  //   technologies: ["cv2", "Ultralytics", "Yolov8", "Gemenai"],
+  //     "Built a full-featured real-time chat application using the MERN stack. The platform supports both text and video communication, friend requests, and secure login through JWT authentication.    image: assets.Emotion, // Replace with actual image path",
+  //   //     // demoLink: "https://demo.ai-image-generator.com",
+  //   codeLink: "https://github.com/Vikram-353/StreamSpeak",
+  //   image: assets.Portfolio, // Replace with actual image path
+
+  //   technologies: ["MERN", "Zustand", "ReactQuery", "Stream"],
   //   featured: true,
-  //   category: "CV",
+  //   category: "Web App",
   // },
   {
     id: 5,
@@ -184,6 +191,45 @@ export const projectsData = [
     ],
     featured: false,
     category: "Android App",
+  },
+  {
+    id: 10,
+    title: "StreamSpeak",
+    description: "Social app with chat & feed",
+    longDescription:
+      "A full-featured social media web app enabling users to create and share text, image, and video posts. Users can like, comment, send/accept friend requests, and receive real-time notifications. The app also supports real-time chat and video calling between friends for seamless communication.",
+    image: assets.straemspeak,
+
+    codeLink: "https://github.com/Vikram-353/StreamSpeak",
+    technologies: [
+      "MERN",
+      "React Query",
+      "Zustand",
+      "JWT (jsonwebtoken)",
+      "GetStream.io",
+    ],
+    featured: true,
+    category: "Web App",
+  },
+  {
+    id: 11,
+    title: "RAG-APP",
+    description: "Chat with Your Documents (Gemini + Qdrant)",
+    longDescription:
+      "This is a Streamlit-based RAG (Retrieval-Augmented Generation) application that allows users to upload documents (.pdf, .docx, .txt) and interact with them through a chatbot powered by Google Gemini and LangChain. It leverages Qdrant for semantic vector search and HuggingFace embeddings to enable intelligent document understanding.",
+    image: assets.rag_app,
+
+    codeLink: "https://github.com/Vikram-353/RAG-APP",
+    technologies: [
+      "Streamlit",
+      "LangChain ",
+      "Qdrant",
+      "HuggingFace Transformers",
+      "Google Generative AI (Gemini)",
+      "Python",
+    ],
+    featured: true,
+    category: "GenAI",
   },
 ];
 
@@ -283,5 +329,24 @@ export const galleryItems = [
     description:
       "Successfully advanced through two rounds of the Code Kshetra 2.0 Hackathon.",
     location: "JIMS Rohini",
+  },
+  {
+    id: 11,
+    src: CDAC,
+    alt: "CDAC",
+    category: "certificate",
+    date: "July 2025",
+    description:
+      "Completed certification in Foundation of Big Data and Data Science by CDAC Noida.",
+    location: "CDAC Noida",
+  },
+  {
+    id: 12,
+    src: CSI,
+    alt: "CSI2025",
+    category: "Internship",
+    date: "August 2025",
+    description: "Office Visit at Celebal Technologies Noida ",
+    location: "CT Noida",
   },
 ].reverse();
