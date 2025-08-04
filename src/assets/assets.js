@@ -19,7 +19,7 @@ import Patent from "./Patent.pdf";
 import HumanActivity from "./HumanActivity.png";
 import SIH from "./SIH.jpg";
 import JIMS from "./JIMS.jpg";
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import app from "./app.png";
 import resume from "./Vikram Ranjan Resume.pdf";
 import CDAC from "./CDAC.png";
