@@ -21,7 +21,7 @@ import SIH from "./SIH.jpg";
 import JIMS from "./JIMS.jpg";
 import logo from "./logo.svg";
 import app from "./app.png";
-import resume from "./Vikram Ranjan Resume.pdf";
+import resume from "./VikramRanjanResume.pdf";
 import CDAC from "./CDAC.png";
 import rag_app from "./rag-app.png";
 import straemspeak from "./streamspeak.png";
