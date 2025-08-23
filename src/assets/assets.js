@@ -66,7 +66,7 @@ export const projectsData = [
     longDescription:
       "This intelligent parking system uses computer vision and deep learning to identify available parking spots in real-time. The solution implements YOLOv8 for object detection, paired with a user-friendly dashboard for parking management.",
     image: assets.Surveillance, // Replace with actual image path
-    demoLink: "https://demo.smartparking.com",
+    // demoLink: "https://demo.smartparking.com",
     codeLink: "https://github.com/Vikram-353/Surveillance-System-Using-Yolov8s",
     technologies: [
       "HTML",
@@ -130,7 +130,7 @@ export const projectsData = [
     longDescription:
       "A MERN-based Doctor Management Web App enables seamless appointment scheduling and management. Built with React, Node.js, Express, and MongoDB, it supports three user roles: Patients can book appointments, Doctors can manage their schedules, and Admins oversee doctors. JWT Authentication ensures secure access, while Cloudinary handles image uploads. Postman is used for API testing and development.",
     image: assets.DocGo, // Replace with actual image path
-    // demoLink: "https://demo.task-manager.com",
+    demoLink: "https://docgo-frontend.onrender.com/",
     codeLink: "https://github.com/Vikram-353/DocGo",
     technologies: [
       "React",
@@ -199,6 +199,7 @@ export const projectsData = [
     longDescription:
       "A full-featured social media web app enabling users to create and share text, image, and video posts. Users can like, comment, send/accept friend requests, and receive real-time notifications. The app also supports real-time chat and video calling between friends for seamless communication.",
     image: assets.straemspeak,
+    demoLink: "https://streamspeak.onrender.com/",
 
     codeLink: "https://github.com/Vikram-353/StreamSpeak",
     technologies: [
@@ -218,7 +219,7 @@ export const projectsData = [
     longDescription:
       "This is a Streamlit-based RAG (Retrieval-Augmented Generation) application that allows users to upload documents (.pdf, .docx, .txt) and interact with them through a chatbot powered by Google Gemini and LangChain. It leverages Qdrant for semantic vector search and HuggingFace embeddings to enable intelligent document understanding.",
     image: assets.rag_app,
-
+    demoLink: "https://vikram-353-rag-app-rag-kmjgoa.streamlit.app/",
     codeLink: "https://github.com/Vikram-353/RAG-APP",
     technologies: [
       "Streamlit",

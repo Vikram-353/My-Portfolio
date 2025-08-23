@@ -75,6 +75,7 @@ const FeaturedProject = ({
   image,
   technologies,
   codeLink,
+  demoLink,
 }) => (
   <motion.div
     className="bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition duration-300"
@@ -101,12 +102,24 @@ const FeaturedProject = ({
           </span>
         ))}
       </div>
-      <Link
-        to={codeLink}
-        className="inline-block mt-4 text-blue-400 hover:text-blue-300 text-sm font-semibold"
-      >
-        View Project →
-      </Link>
+      <div className="flex justify-between ">
+        <Link
+          to={codeLink}
+          className="inline-block mt-4 text-blue-400 hover:text-blue-300 text-md font-semibold"
+        >
+          GitHub
+        </Link>
+        {demoLink ? (
+          <Link
+            to={demoLink}
+            className="inline-block mt-4 text-blue-400 hover:text-blue-300 text-md font-semibold"
+          >
+            Live
+          </Link>
+        ) : (
+          <p>""</p>
+        )}
+      </div>
     </div>
   </motion.div>
 );

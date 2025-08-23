@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { assets, projectsData } from "../assets/assets.js";
+import { Link } from "react-router-dom";
 
 // Project categories
 const categories = ["All", "Web App", "ML", "CV", "Android App"];
@@ -296,8 +297,15 @@ function Projects() {
                               />
                             </svg>
                           </motion.button>
-                          <div className="flex gap-2">
-                            {project.codeLink && (
+                          <div className="flex justify-between ">
+                            {project.demoLink ? (
+                              <Link
+                                to={project.demoLink}
+                                className="inline-block mt-4 text-blue-400 hover:text-blue-300 text-md font-semibold"
+                              >
+                                Live
+                              </Link>
+                            ) : (
                               <motion.a
                                 href={project.codeLink}
                                 target="_blank"
@@ -324,6 +332,35 @@ function Projects() {
                               </motion.a>
                             )}
                           </div>
+                          {/* <div className="flex gap-2">
+                            {project.codeLink && (
+                              <motion.a
+                                href={project.codeLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                variants={buttonVariants}
+                                initial="rest"
+                                whileHover="hover"
+                                whileTap="tap"
+                                className="p-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
+                              >
+                                <h3>Demo</h3>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="h-4 w-4 text-gray-300"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clipRule="evenodd"
+                                  />
+                                </svg>
+                              </motion.a>
+                            )}
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -435,13 +472,35 @@ function Projects() {
                       {activeProject.longDescription}
                     </motion.p>
 
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.9 }}
-                      className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-                    >
-                      {activeProject.codeLink && (
+                    {activeProject.demoLink ? (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.9 }}
+                        className="mt-10 flex flex-col sm:flex-row gap-4 justify-between"
+                      >
+                        <motion.a
+                          href={activeProject.demoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium flex items-center justify-center transition-colors"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5 mr-2"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          Live
+                        </motion.a>
                         <motion.a
                           href={activeProject.codeLink}
                           target="_blank"
@@ -464,8 +523,40 @@ function Projects() {
                           </svg>
                           View Code
                         </motion.a>
-                      )}
-                    </motion.div>
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.9 }}
+                        className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+                      >
+                        {activeProject.codeLink && (
+                          <motion.a
+                            href={activeProject.codeLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium flex items-center justify-center transition-colors"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 mr-2"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                            View Code
+                          </motion.a>
+                        )}
+                      </motion.div>
+                    )}
                   </div>
                 </>
               )}
